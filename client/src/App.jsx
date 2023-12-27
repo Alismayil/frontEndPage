@@ -6,21 +6,20 @@ import Home from './page/home';
 import Login from './page/login';
 import Register from './page/register';
 import User from './page/user';
+import Admin from './page/admin';
 
 function App() {
   return (
-   <>
-      <BrowserRouter>
-   <Navbar/>
-      <Routes>
-        <Route path="/" element={<Home/>}  />
-        <Route path="/login" element={<Login/>} />
-        <Route path="/register"  element={<Register/>}  />
-        <Route path="/user" element={<User/>} />
-      </Routes>
-    </BrowserRouter>
-   
-   </>
+    <>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/user" element={<User />} />
+            <Route path="/admin" element={<Admin />} />
+          </Routes>
+    </>
   )
 }
 
