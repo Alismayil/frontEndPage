@@ -22,7 +22,7 @@ function Register() {
 
 
   return (
-    <div >
+    <div style={{marginTop:"200px"}}>
       <form action="" onSubmit={(e) => handleRegister(e)}>
         <input value={username} onChange={(e) => setUsername(e.target.value)} type="text" placeholder='username' required /><br />
         <input value={password} onChange={(e) => setPassword(e.target.value)} type="text" placeholder='password' required /><br />

@@ -38,11 +38,13 @@ const AuthContextProvider = ({ children }) => {
     }
 
     const axiosLogin = async (userData)=>{
+        console.log(userData);
        try {
         const res=await axios.post("http://localhost:4000/login",{
         username:userData.username,
         password:userData.password
         })
+        console.log(res);
         const decoded = jwtDecode(res.data);
         console.log(decoded);
 
@@ -60,23 +62,17 @@ const AuthContextProvider = ({ children }) => {
        }
     }
 
-    function handleLogOut() {
-        setUser(null)
-        setRole(null)
-        setToken(null)
-
-        localStorage.removeItem("user")
-        localStorage.removeItem("role")
-        localStorage.removeItem("token")
-    }
+ 
 
     const data = {
         axiosRegister,
         axiosLogin,
+        setRole,
+        setToken,
+        setUser,
         user,
         role,
         token,
-        handleLogOut
         
     }
 
